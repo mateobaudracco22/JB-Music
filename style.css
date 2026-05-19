@@ -1,0 +1,55 @@
+body{
+    background-color: rgba(154, 109, 199, 0.333);
+}
+
+:root{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    max-width: 40dvw;
+    margin: auto;
+    border-radius: 20px;
+    background-color: rgb(47, 98, 102);
+    text-align: center;
+    box-shadow: 0 0 9px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1{
+    color: aqua;
+}
+
+.contenedor__img{
+    margin-top: 10px;
+}
+
+p{
+    color: aqua;
+}
+img{
+   border-radius: 50%;
+   object-fit: cover;
+   height: 200px;
+   width: 200px;
+   max-height: 35dvh;
+   box-shadow: 0 0 9px;
+   border: 2px solid rgb(105, 162, 189);
+   max-width: 35dvw;
+   min-width: 20dvw;
+   min-height: 20dvh;
+}
+
+a{
+    background-color: rgba(84, 12, 136, 0.2);
+    color: aqua;
+    text-decoration: none;
+}
+
+a:hover{
+    color: white;
+}
