@@ -4,7 +4,7 @@ body {
     color: white;
 
     /* MISMO GRADIENTE DEL HERO / LOGO */
-    background: linear-gradient(135deg, #00ff88, #0066ff);
+    background: linear-gradient(120deg, #000000, #c1d413);
 
     /* Para que no se vea plano */
     min-height: 100vh;
@@ -25,7 +25,7 @@ header {
 }
 
 h1 {
-    color: #000000;
+    color: #c1d413;
     font-size: 40px;
     margin: 0;
     font-family: var(--fuentep);
@@ -36,13 +36,13 @@ h1 {
 }
 
 section p{
-    color: #00ff88;
+    color: #c1d413;
 }
 /* HERO */
 .hero {
     text-align: center;
     padding: 80px 20px;
-    background: linear-gradient(135deg, #00ff88, #0066ff);
+    background: linear-gradient(135deg, #000000, #c1d413);
     color: black;
     margin: 40px auto;
     width: 70%;
@@ -65,7 +65,9 @@ section {
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
+p{
+    color: #c1d413;
+}
 /* HOVER (movimiento) */
 .card:hover {
     transform: translateY(-8px) scale(1.01);
@@ -74,7 +76,7 @@ section {
 
 /* TITULOS */
 .card h2 {
-    color: #00ff88;
+    color: #c1d413;
     font-family: var(--fuentep);
 }
 
@@ -108,7 +110,7 @@ section {
 }
 
 footer p{
-    color: #00ff88;
+    color: #000000;
 }
 
 /* ANIMACIÓN DEL BORDE */
