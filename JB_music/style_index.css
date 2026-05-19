@@ -1,0 +1,122 @@
+body {
+     margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+
+    /* MISMO GRADIENTE DEL HERO / LOGO */
+    background: linear-gradient(135deg, #00ff88, #0066ff);
+
+    /* Para que no se vea plano */
+    min-height: 100vh;
+}
+
+
+@font-face{
+    font-family: "BebasaNeue";
+    src: url(../fonts/Lobster-Regular.ttf) format("truetype");
+}
+
+*{
+    --fuentep: "Lobster";
+}
+/* HEADER */
+header {
+    padding: 20px;
+}
+
+h1 {
+    color: #000000;
+    font-size: 40px;
+    margin: 0;
+    font-family: var(--fuentep);
+}
+
+ .hero p {
+    color: black;
+}
+
+section p{
+    color: #00ff88;
+}
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #00ff88, #0066ff);
+    color: black;
+    margin: 40px auto;
+    width: 70%;
+    border-radius: 15px;
+}
+
+/* CONTENEDOR GENERAL */
+section {
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+/* 🧩 CAJAS (CARDS) */
+.card {
+    position: relative;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 15px;
+    background: rgba(20, 20, 20, 0.9);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* HOVER (movimiento) */
+.card:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 0 20px rgba(0,255,136,0.3);
+}
+
+/* TITULOS */
+.card h2 {
+    color: #00ff88;
+    font-family: var(--fuentep);
+}
+
+/* ✨ BORDE ANIMADO (destello) */
+.card::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 15px;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        #ffffff,
+        transparent,
+        #ffffff,
+        transparent
+    );
+    background-size: 300% 300%;
+    animation: borderMove 4s linear infinite;
+    z-index: -1;
+}
+
+/* FONDO INTERNO PARA QUE EL BORDE SE NOTE */
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    border-radius: 13px;
+    background: #111;
+    z-index: -1;
+}
+
+footer p{
+    color: #00ff88;
+}
+
+/* ANIMACIÓN DEL BORDE */
+@keyframes borderMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 300% 50%;
+    }
+}
