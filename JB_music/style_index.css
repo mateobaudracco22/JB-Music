@@ -115,8 +115,29 @@ body.formulario-aprobado footer {
 h1 { color: #d4af37; margin: 20px; font-size: 32px; }
 body > p { color: #888888; margin-left: 20px; }
 
+.menu{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.menu-item{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 14px;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.menu-item:hover{
+    background:#171717;
+    }
+.menu-item.active{
+    background:linear-gradient(90deg,#7b2ff7,#f107a3);
+    }
+
 .hero {
-  background: linear-gradient(135deg, #051300 0%, #a2b70d 100%);
+  background: linear-gradient(135deg, #051300 0%, #d4af37 100%);
   padding: 40px 30px;
   margin: 20px;
   border-radius: 15px;
