@@ -1,124 +1,135 @@
+/* ==========================================================================
+   1. BLOQUEO TOTAL AL INGRESAR (El usuario no puede ver nada más)
+   ========================================================================= */
 body {
-     margin: 0;
-    font-family: Arial, sans-serif;
-    color: white;
-
-    /* MISMO GRADIENTE DEL HERO / LOGO */
-    background: linear-gradient(120deg, #000000, #e6ff01bd);
-
-    /* Para que no se vea plano */
-    min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #0b0b0b; /* Fondo negro puro */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden; /* ¡CLAVE! Evita que el usuario pueda hacer scroll hacia abajo */
 }
 
-
-@font-face{
-    font-family: "BebasaNeue";
-    src: url(../fonts/Lobster-Regular.ttf) format("truetype");
+/* Ocultamos por completo los títulos, secciones y footer del inicio */
+h1, body > p, .hero, .card, footer {
+  display: none !important;
 }
 
-*{
-    --fuentep: "Lobster";
-}
-/* HEADER */
-header {
-    padding: 20px;
+/* ==========================================================================
+   2. EL FORMULARIO COMO ÚNICA PANTALLA VISIBLE
+   ========================================================================= */
+form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0b0b0b; /* Absorbe toda la pantalla en negro */
+  z-index: 99999;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-h1 {
-    color: #e6ff01bd;
-    font-size: 40px;
-    margin: 0;
-    font-family: var(--fuentep);
+/* Estructura de la caja flotante donde van tus inputs */
+form label, 
+form input, 
+form button {
+  width: 90%;
+  max-width: 320px;
+  box-sizing: border-box;
 }
 
- .hero p {
-    color: black;
+form label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #d4af37; /* Dorado */
+  font-weight: 600;
+  font-size: 14px;
 }
 
-section p{
-    color: #e6ff01bd;
+form input {
+  padding: 11px;
+  background-color: #1a1a1a;
+  border: 1px solid #d4af37;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 15px;
 }
-/* HERO */
+
+form input:focus {
+  border-color: #ffffff;
+  outline: none;
+}
+
+/* Botones */
+form button {
+  margin-top: 22px;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+form button[type="submit"] {
+  background-color: #d4af37;
+  color: #111111;
+  border: none;
+}
+
+form button[type="reset"] {
+  background-color: transparent;
+  color: #888888;
+  border: 1px solid #444444;
+  margin-top: 10px;
+}
+
+/* ==========================================================================
+   3. LIBERACIÓN DE LA PÁGINA (Solo tras completar el formulario)
+   ========================================================================= */
+
+/* Al enviar, el formulario desaparece por completo */
+form.completado {
+  display: none !important;
+}
+
+/* Al enviar, el body recupera el scroll para que se pueda navegar */
+body.formulario-aprobado {
+  overflow: auto !important;
+}
+
+/* Al enviar, activamos y renderizamos tus secciones de JB Music originales */
+body.formulario-aprobado h1,
+body.formulario-aprobado p,
+body.formulario-aprobado .hero,
+body.formulario-aprobado .card,
+body.formulario-aprobado footer {
+  display: block !important;
+}
+
+/* ==========================================================================
+   4. TUS ESTILOS DE JB MUSIC (Se muestran impecables al desbloquear)
+   ========================================================================= */
+h1 { color: #d4af37; margin: 20px; font-size: 32px; }
+body > p { color: #888888; margin-left: 20px; }
+
 .hero {
-    text-align: center;
-    padding: 80px 20px;
-    background: linear-gradient(135deg, #000000, #e6ff01bd);
-    color: black;
-    margin: 40px auto;
-    width: 70%;
-    border-radius: 15px;
+  background: linear-gradient(135deg, #051300 0%, #a2b70d 100%);
+  padding: 40px 30px;
+  margin: 20px;
+  border-radius: 15px;
+  color: #ffffff;
 }
 
-/* CONTENEDOR GENERAL */
-section {
-    max-width: 900px;
-    margin: 40px auto;
-}
-
-/* 🧩 CAJAS (CARDS) */
 .card {
-    position: relative;
-    padding: 25px;
-    margin: 20px 0;
-    border-radius: 15px;
-    background: rgba(20, 20, 20, 0.9);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-p{
-    color: #e6ff01bd;
-}
-/* HOVER (movimiento) */
-.card:hover {
-    transform: translateY(-8px) scale(1.01);
-    box-shadow: 0 0 20px rgba(0,255,136,0.3);
+  background-color: #141414;
+  border: 1px solid #222222;
+  padding: 25px;
+  margin: 20px;
+  border-radius: 12px;
 }
 
-/* TITULOS */
-.card h2 {
-    color: #e6ff01bd;
-    font-family: var(--fuentep);
-}
-
-/* ✨ BORDE ANIMADO (destello) */
-.card::before {
-    content: "";
-    position: absolute;
-    inset: -2px;
-    border-radius: 15px;
-    background: linear-gradient(
-        120deg,
-        transparent,
-        #ffffff,
-        transparent,
-        #ffffff,
-        transparent
-    );
-    background-size: 300% 300%;
-    animation: borderMove 4s linear infinite;
-    z-index: -1;
-}
-
-/* FONDO INTERNO PARA QUE EL BORDE SE NOTE */
-.card::after {
-    content: "";
-    position: absolute;
-    inset: 2px;
-    border-radius: 13px;
-    background: #111;
-    z-index: -1;
-}
-
-footer p{
-    color: #000000;
-}
-
-/* ANIMACIÓN DEL BORDE */
-@keyframes borderMove {
-    0% {
-        background-position: 0% 50%;
-    }
-    100% {
-        background-position: 300% 50%;
-    }
-}
+.card h2 { color: #a2b70d; }
+.card p { color: #cccccc; }
