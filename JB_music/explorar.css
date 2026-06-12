@@ -1,0 +1,97 @@
+body {
+            background-color: #121212; /* Negro oscuro de fondo */
+            color: #FFFFFF; /* Texto blanco para que contraste */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+}
+
+h1 {
+            color: #FFD700; /* Amarillo Dorado para el título principal */
+            text-align: center;
+            border-bottom: 2px solid #FFD700;
+            padding-bottom: 10px;
+}
+
+        /* --- CONTENEDOR PRINCIPAL DE LAS CAJAS --- */
+.grid-explorar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+}
+
+        /* --- DISEÑO DE LAS CAJAS (TARJETAS DE CANCIONES) --- */
+        .tarjeta-musical {
+            background-color: #1E1E1E; /* Negro un poco más claro para la caja */
+            border: 1px solid #FFD700; /* Borde dorado alrededor de la caja */
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(255, 215, 0, 0.1); /* Destello dorado sutil */
+        }
+
+        .nombre-artista {
+            color: #FFD700; /* Dorado para el nombre del artista */
+            margin: 0 0 5px 0;
+            font-size: 1.2rem;
+        }
+
+        .titulo-cancion {
+            margin: 0 0 15px 0;
+            color: #E0E0E0;
+            font-style: italic;
+        }
+
+        /* Reproductor de audio nativo */
+        audio {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        /* --- SECCIÓN DE COMENTARIOS DENTRO DE LA CAJA --- */
+        .seccion-comentarios {
+            border-top: 1px solid #333333; /* Línea divisoria interna */
+            padding-top: 15px;
+            margin-top: 15px;
+        }
+
+        .seccion-comentarios h4 {
+            margin: 0 0 10px 0;
+            color: #FFD700; /* Título de comentarios en dorado */
+            font-size: 0.9rem;
+        }
+
+        /* Formulario para dejar un comentario */
+        .formulario-comentario {
+            display: flex;
+            gap: 10px;
+        }
+
+.input-comentario {
+            flex-grow: 1;
+            background-color: #2D2D2D;
+            border: 1px solid #555555;
+            border-radius: 4px;
+            color: #FFF;
+            padding: 8px;
+}
+
+        /* Estilo al hacer clic en el input */
+.input-comentario:focus {
+            outline: none;
+            border-color: #FFD700; /* El borde se ilumina en dorado */
+}
+
+.boton-enviar {
+            background-color: #FFD700; /* Botón dorado */
+            color: #000000; /* Texto negro para que resalte en el botón */
+            border: none;
+            border-radius: 4px;
+            padding: 8px 15px;
+            font-weight: bold;
+            cursor: pointer;
+}
+
+.boton-enviar:hover {
+            background-color: #E6C200; /* Dorado un poco más oscuro al pasar el mouse */
+}
