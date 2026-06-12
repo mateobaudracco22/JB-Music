@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorar</title>
+    <link rel="stylesheet" href="explorar.css">
+</head>
+<body>
+    <h1>Sección Explorar: Nuevos Lanzamientos</h1>
+
+    <div class="grid-explorar">
+
+        <!-- CAJA 1: ARTISTA INDIVIDUAL -->
+        <div class="tarjeta-musical">
+            <h3 class="nombre-artista">Ciro y los persas</h3>
+            <p class="titulo-cancion">Género: Rock Argentino | Tema: "Luz"</p>
+            
+            <!-- Etiqueta de audio: Reemplaza "enlace_a_la_cancion.mp3" con el archivo real -->
+            <audio controls>
+                <source src="audios/Ciro y los Persas - Luz.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+
+            <!-- Bloque de comentarios de esta canción -->
+            <div class="seccion-comentarios">
+                <h4>Feedback para disqueras y usuarios</h4>
+                <div class="formulario-comentario">
+                    <input type="text" class="input-comentario" placeholder="Escribe un comentario o propuesta..." required>
+                    <button type="submit" class="boton-enviar">Enviar</button>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="tarjeta-musical">
+            <h3 class="nombre-artista">Creedence Clearwater Revival</h3>
+            <p class="titulo-cancion">Género: Rock | Tema: "Fortune Son"</p>
+            
+            <audio controls>
+                <source src="audios/Creedence Clearwater Revival - Fortunate Son.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+
+            <div class="seccion-comentarios">
+                <h4>Feedback para disqueras y usuarios</h4>
+                <div class="formulario-comentario">
+                    <input type="text" class="input-comentario" placeholder="Escribe un comentario o propuesta..." required>
+                    <button type="submit" class="boton-enviar">Enviar</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
