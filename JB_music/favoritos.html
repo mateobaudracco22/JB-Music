@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favoritos - JB Music</title>
+    <link rel="icon" href="../img/logoJBmusic.png" type="image/png">
+    <link rel="stylesheet" href="favoritos.css">
+</head>
+<body>
+
+    <!-- BARRA LATERAL -->
+    <aside class="sidebar">
+        <div class="logo"><span>JB</span> Music</div>
+
+        <nav>
+            <a href="nuevo_index.html" class="menu">🏠 <span>Inicio</span></a>
+            <a href="explorar.html" class="menu">🔍 <span>Explorar</span></a>
+            <a href="biblioteca.html" class="menu">📚 <span>Biblioteca</span></a>
+            <a href="favoritos.html" class="menu active">♡ <span>Favoritos</span></a>
+            <a href="notificaciones.html" class="menu">🔔 <span>Notificaciones</span></a>
+            <a href="formulario.html" class="menu" id="botonSesion"><span>Iniciar Sesión</span></a>
+        </nav>
+
+        <div class="linea"></div>
+        <h4>Tus playlists</h4>
+
+        <div class="playlist"><img src="https://picsum.photos/60?random=1"><span>Nuevos Lanzamientos</span></div>
+        <div class="playlist"><img src="https://picsum.photos/60?random=2"><span>Trap & RKT</span></div>
+        <div class="playlist"><img src="https://picsum.photos/60?random=3"><span>Reggaeton</span></div>
+        <div class="playlist"><img src="https://picsum.photos/60?random=4"><span>Favoritas</span></div>
+
+        <div class="promo">
+            <div class="promo-icon">♛</div>
+            <h2>JB Music</h2>
+            <p>Impulsando artistas al mundo</p>
+        </div>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <header>
+            <div class="search">
+                🔍
+                <input type="text" id="buscador" placeholder="Buscar en tus favoritos...">
+            </div>
+            <div class="user">
+                🔔
+                <div class="avatar">JM</div>
+                ▼
+            </div>
+        </header>
+
+        <section class="titulo-pagina">
+            <h1>Tus <span>Favoritos</span></h1>
+            <p><span id="contador">5</span> canciones guardadas</p>
+        </section>
+
+        <section class="section">
+            <div class="lista-favoritos" id="listaFavoritos">
+
+                <div class="fav-item">
+                    <div class="fav-cover">♪</div>
+                    <div class="fav-info">
+                        <strong>Quédate</strong>
+                        <small>KHEA</small>
+                    </div>
+                    <button class="quitar" title="Quitar de favoritos">♥</button>
+                </div>
+
+                <div class="fav-item">
+                    <div class="fav-cover">♪</div>
+                    <div class="fav-info">
+                        <strong>Dame</strong>
+                        <small>Quevedo</small>
+                    </div>
+                    <button class="quitar" title="Quitar de favoritos">♥</button>
+                </div>
+
+                <div class="fav-item">
+                    <div class="fav-cover">♪</div>
+                    <div class="fav-info">
+                        <strong>Souvenir</strong>
+                        <small>Dillom</small>
+                    </div>
+                    <button class="quitar" title="Quitar de favoritos">♥</button>
+                </div>
+
+                <div class="fav-item">
+                    <div class="fav-cover">♪</div>
+                    <div class="fav-info">
+                        <strong>Columbia</strong>
+                        <small>Quevedo</small>
+                    </div>
+                    <button class="quitar" title="Quitar de favoritos">♥</button>
+                </div>
+
+                <div class="fav-item">
+                    <div class="fav-cover">♪</div>
+                    <div class="fav-info">
+                        <strong>LUNA</strong>
+                        <small>Rels B</small>
+                    </div>
+                    <button class="quitar" title="Quitar de favoritos">♥</button>
+                </div>
+
+            </div>
+
+            <p class="vacio" id="vacio">Todavía no tenés favoritos. ¡Explorá y guardá tus canciones! ♡</p>
+        </section>
+
+    </main>
+
+    <script src="favoritos.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca - JB Music</title>
+    <link rel="icon" href="../img/logoJBmusic.png" type="image/png">
+    <link rel="stylesheet" href="biblioteca.css">
+</head>
+<body>
+
+    <!-- BARRA LATERAL -->
+    <aside class="sidebar">
+        <div class="logo"><span>JB</span> Music</div>
+
+        <nav>
+            <a href="nuevo_index.html" class="menu">🏠 <span>Inicio</span></a>
+            <a href="explorar.html" class="menu">🔍 <span>Explorar</span></a>
+            <a href="biblioteca.html" class="menu active">📚 <span>Biblioteca</span></a>
+            <a href="favoritos.html" class="menu">♡ <span>Favoritos</span></a>
+            <a href="notificaciones.html" class="menu">🔔 <span>Notificaciones</span></a>
+            <a href="formulario.html" class="menu" id="botonSesion"><span>Iniciar Sesión</span></a>
+        </nav>
+
+        <div class="linea"></div>
+        <h4>Tus playlists</h4>
+
+        <div class="playlist"><img src="https://picsum.photos/60?random=1"><span>Nuevos Lanzamientos</span></div>
+        <div class="playlist"><img src="https://picsum.photos/60?random=2"><span>Trap & RKT</span></div>
+        <div class="playlist"><img src="https://picsum.photos/60?random=3"><span>Reggaeton</span></div>
+        <div class="playlist"><img src="https://picsum.photos/60?random=4"><span>Favoritas</span></div>
+
+        <div class="promo">
+            <div class="promo-icon">♛</div>
+            <h2>JB Music</h2>
+            <p>Impulsando artistas al mundo</p>
+        </div>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <header>
+            <div class="search">
+                🔍
+                <input type="text" id="buscador" placeholder="Buscar en tu biblioteca...">
+            </div>
+            <div class="user">
+                🔔
+                <div class="avatar">JM</div>
+                ▼
+            </div>
+        </header>
+
+        <section class="titulo-pagina">
+            <h1>Tu <span>Biblioteca</span></h1>
+            <p>Todo lo que guardaste en JB Music.</p>
+        </section>
+
+        <div class="filtros">
+            <button class="filtro activo" data-filtro="todo">Todo</button>
+            <button class="filtro" data-filtro="playlists">Playlists</button>
+            <button class="filtro" data-filtro="artistas">Artistas</button>
+            <button class="filtro" data-filtro="canciones">Canciones</button>
+        </div>
+
+        <!-- PLAYLISTS -->
+        <section class="section" data-tipo="playlists">
+            <div class="section-header">
+                <h2>Playlists</h2>
+            </div>
+
+            <div class="playlists">
+                <div class="playlist-card item">
+                    <div class="playlist-image image1">🎧</div>
+                    <h3>Trap & RKT</h3>
+                    <p>Los mejores hits del momento</p>
+                    <button class="playlist-play">▶</button>
+                </div>
+
+                <div class="playlist-card item">
+                    <div class="playlist-image image2">🌴</div>
+                    <h3>Reggaeton</h3>
+                    <p>Lo más nuevo y pegadizo</p>
+                    <button class="playlist-play">▶</button>
+                </div>
+
+                <div class="playlist-card item">
+                    <div class="playlist-image image3">🎤</div>
+                    <h3>Nuevos Lanzamientos</h3>
+                    <p>Lo último en la escena</p>
+                    <button class="playlist-play">▶</button>
+                </div>
+
+                <div class="playlist-card item">
+                    <div class="playlist-image image4">🔥</div>
+                    <h3>Mix Personalizado</h3>
+                    <p>Hecho para vos</p>
+                    <button class="playlist-play">▶</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ARTISTAS -->
+        <section class="section" data-tipo="artistas">
+            <div class="section-header">
+                <h2>Artistas</h2>
+            </div>
+
+            <div class="artists">
+                <div class="artist item"><div class="artist-photo">K</div><h3>KHEA</h3></div>
+                <div class="artist item"><div class="artist-photo">Q</div><h3>QUEVEDO</h3></div>
+                <div class="artist item"><div class="artist-photo">D</div><h3>DILLOM</h3></div>
+                <div class="artist item"><div class="artist-photo">R</div><h3>RELS B</h3></div>
+                <div class="artist item"><div class="artist-photo">N</div><h3>NEO R</h3></div>
+            </div>
+        </section>
+
+        <!-- CANCIONES -->
+        <section class="section" data-tipo="canciones">
+            <div class="section-header">
+                <h2>Canciones guardadas</h2>
+            </div>
+
+            <div class="songs">
+                <article class="song item">
+                    <div class="cover cover1">
+                        <span>QUÉDATE</span>
+                        <button class="play">▶</button>
+                    </div>
+                    <h3>Quédate</h3>
+                    <p>KHEA</p>
+                </article>
+
+                <article class="song item">
+                    <div class="cover cover2">
+                        <span>DAME</span>
+                        <button class="play">▶</button>
+                    </div>
+                    <h3>Dame</h3>
+                    <p>Quevedo</p>
+                </article>
+
+                <article class="song item">
+                    <div class="cover cover3">
+                        <span>SOUVENIR</span>
+                        <button class="play">▶</button>
+                    </div>
+                    <h3>Souvenir</h3>
+                    <p>Dillom</p>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="biblioteca.js"></script>
+</body>
+</html>

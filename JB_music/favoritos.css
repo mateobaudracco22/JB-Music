@@ -1,0 +1,75 @@
+/* ===== TÍTULO DE LA PÁGINA ===== */
+.titulo-pagina {
+    margin-bottom: 25px;
+}
+
+.titulo-pagina h1 {
+    font-size: 36px;
+}
+
+.titulo-pagina h1 span {
+    color: #8b5cf6;
+}
+
+.titulo-pagina p {
+    color: #aaa;
+    margin-top: 6px;
+}
+
+/* ===== LISTA DE FAVORITOS ===== */
+.lista-favoritos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.fav-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #161622;
+    padding: 12px 15px;
+    border-radius: 12px;
+}
+
+.fav-item:hover {
+    background: #1e1e30;
+}
+
+.fav-cover {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #8b5cf6, #ec4899);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.fav-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.fav-info small {
+    color: #aaa;
+    margin-top: 3px;
+}
+
+.quitar {
+    background: none;
+    border: none;
+    color: #ec4899;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Mensaje cuando no quedan favoritos */
+.vacio {
+    display: none;
+    text-align: center;
+    color: #aaa;
+    padding: 40px 0;
+}

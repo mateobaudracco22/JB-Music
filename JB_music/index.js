@@ -1,7 +1,13 @@
-const formulario = document.querySelector('form');
+const botonSesion = document.getElementById('botonSesion');
+const nombreUsuario = localStorage.getItem('nombreUsuario');
 
-    formulario.addEventListener('submit', function(evento) {
-        evento.preventDefault(); // Detiene la recarga
-        formulario.classList.add('completado'); // Oculta la cortina negra
-        document.body.classList.add('formulario-aprobado'); // Libera el contenido musical
+if (nombreUsuario) {
+    botonSesion.querySelector('span').textContent = 'Cerrar sesión';
+    document.querySelector('.avatar').textContent = nombreUsuario.charAt(0).toUpperCase();
+
+    botonSesion.addEventListener('click', function (evento) {
+        evento.preventDefault();
+        localStorage.removeItem('nombreUsuario');
+        window.location.href = 'formulario.html';
     });
+}
